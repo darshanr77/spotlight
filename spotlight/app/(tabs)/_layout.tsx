@@ -1,17 +1,23 @@
 import React from 'react';
 import { Tabs } from 'expo-router';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { COLORS } from '../../constants/theme';
 
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
         tabBarShowLabel: false,
+        tabBarActiveTintColor:COLORS.primary,
+        tabBarInactiveTintColor:COLORS.grey,
         headerShown: false,
         tabBarStyle: {
           backgroundColor: '#000000',
-          borderTopWidth: 1,
-          borderTopColor: '#333333',
+          position:"absolute",
+          elevation:0,
+          height:60,
+          paddingTop:10,
+          paddingBottom:10
         },
       }}
     >
